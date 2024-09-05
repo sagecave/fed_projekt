@@ -1,0 +1,21 @@
+---
+import EmployeeCard from "./EmployeeCard.astro";
+
+const { data, theme = "light" } = Astro.props;
+---
+
+<section data-theme={theme}>
+  {data.map((employee) => <EmployeeCard {employee} />)}
+</section>
+
+<style>
+  @layer components {
+    [data-theme="dark"] {
+      /* --bg-section; black;
+        --text-section: white; */
+    }
+
+    section {
+    }
+  }
+</style>
