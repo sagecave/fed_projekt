@@ -26,11 +26,11 @@
 
         /* Font size */
         --header-1: clamp(1.5625rem, 0.8851rem + 2.8902vw, 3.125rem);
-        --header--2: clamp(1.3021rem, 0.7828rem + 2.2158vw, 2.5rem);
-        --header--3: clamp(1.0851rem, 0.6884rem + 1.6924vw, 2rem);
-        --header--4: clamp(0.9042rem, 0.6026rem + 1.287vw, 1.6rem);
-        --header--5: clamp(0.7535rem, 0.5253rem + 0.9738vw, 1.28rem);
-        --header--6: clamp(0.6279rem, 0.4562rem + 0.7326vw, 1.024rem);
+        --header-2: clamp(1.3021rem, 0.7828rem + 2.2158vw, 2.5rem);
+        --header-3: clamp(1.0851rem, 0.6884rem + 1.6924vw, 2rem);
+        --header-4: clamp(0.9042rem, 0.6026rem + 1.287vw, 1.6rem);
+        --header-5: clamp(0.7535rem, 0.5253rem + 0.9738vw, 1.28rem);
+        --header-6: clamp(0.6279rem, 0.4562rem + 0.7326vw, 1.024rem);
      
        
        
