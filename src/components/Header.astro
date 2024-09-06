@@ -1,5 +1,5 @@
 ---
-
+import Buttons from "./Buttons.astro";
 ---
 
 <div class="navbar">
@@ -10,7 +10,7 @@
     <li><a href="#">Team</a></li>
     <li><a href="#">About</a></li>
   </ul>
-  <button>login</button>
+  <Buttons theme="login" label="login" />
 </div>
 
 <style>
@@ -41,12 +41,6 @@
             color: var(--primary_white);
           }
         }
-      }
-
-      button {
-        background-color: var(--primary_yellow);
-        border-radius: 1.25rem;
-        padding: 0.25rem 1rem;
       }
     }
   }

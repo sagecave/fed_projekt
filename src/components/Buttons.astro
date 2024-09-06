@@ -1,0 +1,33 @@
+---
+const { theme = "black", label = "login" } = Astro.props;
+---
+
+<button data-button={theme}>{label}</button>
+
+<style>
+  @layer components {
+    button {
+      background-color: var(--primary_white);
+      border-radius: 2.625rem;
+      padding: 1rem 2.0625rem;
+    }
+    [data-button="login"] {
+      background-color: var(--primary_yellow);
+      border-radius: 1.25rem;
+      padding: 0.25rem 1.5rem;
+    }
+
+    [data-button="black"] {
+      background-color: var(--primary_black);
+      color: var(--primary_white);
+    }
+    [data-button="white"] {
+      background-color: var(--primary_white);
+      color: var(--primary_black);
+    }
+    [data-button="yellow"] {
+      background-color: var(--primary_yellow);
+      color: var(--primary_black);
+    }
+  }
+</style>
