@@ -15,19 +15,49 @@ const { theme = "black", label = "login" } = Astro.props;
       background-color: var(--primary_yellow);
       border-radius: 1.25rem;
       padding: 0.25rem 1.5rem;
+      &:hover {
+            --colorChange: 15% #fff;
+        }
+        
+        &:active {
+            --colorChange: 20% #000;
+        } 
     }
+
+    [
 
     [data-button="black"] {
       background-color: var(--primary_black);
       color: var(--primary_white);
+      &:hover {
+            --colorChange: 15% #fff;
+        }
+        
+        &:active {
+            --colorChange: 20% #000;
+        } 
     }
     [data-button="white"] {
       background-color: var(--primary_white);
       color: var(--primary_black);
+      &:hover {
+            --colorChange: 15% #fff;
+        }
+        
+        &:active {
+            --colorChange: 20% #000;
+        } 
     }
     [data-button="yellow"] {
       background-color: var(--primary_yellow);
       color: var(--primary_black);
+      &:hover {
+            --colorChange: 15% #fff;
+        }
+        
+        &:active {
+            --colorChange: 20% #000;
+        } 
     }
   }
 </style>

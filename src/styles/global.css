@@ -16,12 +16,12 @@
         &:active {
             --colorChange: 20% #000;
         } */
-
         --primary_yellow: color-mix(in oklch, #FFCC4A, var(--colorChange, 0% #fff));
         --primary_green: color-mix(in oklch, #4EAF4E, var(--colorChange, 0% #fff));
         --primary_black:color-mix(in oklch, #181818, var(--colorChange, 0% #fff));
         --primary_white:color-mix(in oklch, #FFFFFF, var(--colorChange, 0% #fff));
         --secondary_white: color-mix(in oklch, #F5F5F5, var(--colorChange, 0% #fff));
+      
 
 
         /* Font size */
@@ -51,9 +51,14 @@
     .flow > *+* {
         margin-block-start: var(--flow-space, 1rem);
     }
+   button,a{
+      --primary_yellow: color-mix(in oklch, #FFCC4A, var(--colorChange, 0% #fff));
+        --primary_green: color-mix(in oklch, #4EAF4E, var(--colorChange, 0% #fff));
+        --primary_black:color-mix(in oklch, #181818, var(--colorChange, 0% #fff));
+        --primary_white:color-mix(in oklch, #FFFFFF, var(--colorChange, 0% #fff));
+        --secondary_white: color-mix(in oklch, #F5F5F5, var(--colorChange, 0% #fff));
+   }
    
-   
-    
     h1,h2,h3,h4,h5,h6{
         line-height: 3.652rem;
         text-wrap: balance;
