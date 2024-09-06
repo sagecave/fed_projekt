@@ -1,0 +1,53 @@
+---
+
+---
+
+<div class="navbar">
+  <h1>AskExperts</h1>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Case Study</a></li>
+    <li><a href="#">Team</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <button>login</button>
+</div>
+
+<style>
+  @layer components {
+    .navbar {
+      padding: 2.38rem;
+
+      background-color: var(--primary_black);
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        color: var(--primary_white);
+      }
+
+      ul {
+        display: flex;
+
+        list-style-type: none;
+        gap: 1.875rem;
+        padding-right: 15%;
+
+        & li {
+          list-style-type: none;
+
+          & a {
+            text-decoration: none;
+            color: var(--primary_white);
+          }
+        }
+      }
+
+      button {
+        background-color: var(--primary_yellow);
+        border-radius: 1.25rem;
+        padding: 0.25rem 1rem;
+      }
+    }
+  }
+</style>
