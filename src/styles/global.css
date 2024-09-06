@@ -39,7 +39,19 @@
         
     }
 
-    /* prøv at få inplamenceret flow/--flow-space */
+    @font-face {
+        font-family: "cabin";
+        src: url(../fonts/Cabin/Cabin-Italic-VariableFont_wdth\,wght.ttf);
+      }
+    @font-face {
+        font-family: "lato";
+        src: url(../fonts/Lato/Lato-BlackItalic.ttf);
+      }
+
+    .flow > *+* {
+        margin-block-start: var(--flow-space, 1rem);
+    }
+   
     
     h1,h2,h3,h4,h5,h6{
         line-height: 3.652rem;
@@ -47,13 +59,41 @@
         font-size: inherit;
         font-weight: inherit;
         margin: 0;
-        font-family: Cabin;
+        font-family: 'cabin';
     }
+    h1 {
+        font-size: var(--header-1);
+       
+      }
+      h2 {
+        font-size: var(--header-2);
+        
+      }
+      h3 {
+        font-size: var(--header-3);
+        
+      }
+      h4 {
+        font-size: var(--header-4);
+      
+      }
+      h5 {
+        font-size: var(--header-5);
+      
+      }
+      h6 {
+        font-size: var(--header-6);
+       
+      }
+      
     p{
         line-height: 1.475rem;
-        font-family: Lato;
+        font-family: 'lato';
+       
     }
    
  
 
 }
+
+ 
