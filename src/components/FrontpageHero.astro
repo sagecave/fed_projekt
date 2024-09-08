@@ -20,13 +20,10 @@ import Buttons from "./Buttons.astro";
     background-color: var(--primary_black);
     .frontPageHero_container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: subgrid;
 
-      & :first-child {
-        max-width: 80%;
-      }
       & :nth-child(2) {
-        grid-column: content/full_end;
+        grid-column: content/full;
       }
     }
   }
