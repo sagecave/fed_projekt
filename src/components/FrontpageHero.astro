@@ -26,7 +26,8 @@ import HeroCard from "./HeroCard.astro";
     .frontPageHero_container {
       display: grid;
       grid-template-columns: subgrid;
-      grid-template-rows: minmax(0, auto) 1fr;
+
+      grid-template-rows: 1fr auto auto;
       grid-column: full;
       & div:nth-child(1) {
         grid-column: content-start;
@@ -37,8 +38,13 @@ import HeroCard from "./HeroCard.astro";
       }
       & div:nth-child(3) {
         grid-column: 2/4;
+        grid-row: 2;
       }
     }
+  }
+
+  .flow {
+    margin-top: 6.28rem;
   }
   section {
     width: 120rem;
@@ -48,8 +54,9 @@ import HeroCard from "./HeroCard.astro";
   }
 
   img {
-    max-height: 70%;
     object-fit: cover;
+
+    height: 30rem;
   }
 
   h1,
