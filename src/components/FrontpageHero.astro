@@ -1,10 +1,11 @@
 ---
 import Buttons from "./Buttons.astro";
+import HeroCard from "./HeroCard.astro";
 ---
 
 <section>
   <div class="frontPageHero_container">
-    <div>
+    <div class="flow">
       <h1>Adam Buschemia Business Consultant</h1>
       <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
       <Buttons theme="white" label="Book a Meeting" />
@@ -12,28 +13,43 @@ import Buttons from "./Buttons.astro";
     <div class="heroimg">
       <img src="../src/assets/images/sarah.jpg" alt="Sarah" />
     </div>
+    <div>
+      <HeroCard />
+    </div>
   </div>
 </section>
 
 <style>
   section {
     background-color: var(--primary_black);
+
     .frontPageHero_container {
       display: grid;
       grid-template-columns: subgrid;
+      grid-template-rows: minmax(0, auto) 1fr;
       grid-column: full;
       & div:nth-child(1) {
         grid-column: content-start;
       }
       & div:nth-child(2) {
         grid-column: 3/-1;
+        grid-row: 1;
+      }
+      & div:nth-child(3) {
+        grid-column: 2/4;
       }
     }
   }
   section {
     width: 120rem;
-    height: 38.47663rem;
+
     overflow: hidden;
+    z-index: 3;
+  }
+
+  img {
+    max-height: 70%;
+    object-fit: cover;
   }
 
   h1,
