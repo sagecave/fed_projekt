@@ -1,5 +1,7 @@
 ---
-const { liContentFirst = "liContentFirst", liContentSecond = "liContentSecond", headerContent = "headerContent", pContent = "pContent", boxContent = "WE'LL WORK WITH YOU" } = Astro.props;
+import SmallBox from "./SmallBox.astro";
+
+const { liContentFirst = "liContentFirst", liContentSecond = "liContentSecond", headerContent = "headerContent", pContent = "pContent" } = Astro.props;
 ---
 
 <section>
@@ -7,11 +9,7 @@ const { liContentFirst = "liContentFirst", liContentSecond = "liContentSecond", 
     <img src="../src/assets/images/what_to_expect.jpg" alt="Gruppe image" />
   </div>
   <div>
-    <div class="boxContent">
-      <p>
-        {boxContent}
-      </p>
-    </div>
+    <SmallBox boxContentP="WE'LL WORK WITH YOU" />
     <h2>{headerContent}</h2>
     <p>{pContent}</p>
     <ul>

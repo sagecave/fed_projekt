@@ -1,0 +1,43 @@
+---
+import CircleDiagram from "./CircleDiagram.astro";
+import SmallBox from "./SmallBox.astro";
+---
+
+<section>
+  <div class="sectionContainer">
+    <div class="flex">
+      <div class="circleContent">
+        <SmallBox colorOfBox="white" boxContentP="EXPERIENCE" />
+        <h2>More than 25 years of experience</h2>
+        <p>3000+ our clients are insured around the World</p>
+      </div>
+      <div class="circleContainer">
+        <CircleDiagram procent="--percent: 85%" circleName="85%" circleP="Consistency" />
+        <CircleDiagram procent="--percent: 95%" circleName="95%" circleP="Improvement" />
+        <CircleDiagram procent="--percent: 90%" circleName="90%" circleP="Branching" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @layer components {
+    section {
+      background-color: var(--primary_yellow);
+    }
+    .sectionContainer {
+      grid-column: 2/4;
+    }
+    .flex {
+      display: flex;
+      padding: 6rem 0rem;
+    }
+
+    .circleContainer {
+      display: flex;
+      gap: 1.62rem;
+      min-width: 50%;
+      flex-wrap: wrap;
+    }
+  }
+</style>
