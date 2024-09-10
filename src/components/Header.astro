@@ -10,11 +10,17 @@ import Buttons from "./Buttons.astro";
     <li><a href="#">Team</a></li>
     <li><a href="#">About</a></li>
   </ul>
-  <Buttons theme="yellow" label="login" />
+  <Buttons theme="yellow" label="login" popuoKnap="popup" />
+
+  <div popover id="popup">Her skal formularen være...</div>
 </div>
 
 <style>
   @layer components {
+    ::backdrop {
+      background: #0004;
+      backdrop-filter: blur(4px);
+    }
     .navbar {
       padding: 2.38rem 0rem;
       grid-column: content;

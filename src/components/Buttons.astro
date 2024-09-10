@@ -1,8 +1,8 @@
 ---
-const { theme = "black", label = "login" } = Astro.props;
+const { theme = "black", label = "login", popuoKnap = "no" } = Astro.props;
 ---
 
-<button data-button={theme}>{label}</button>
+<button popovertarget={popuoKnap} data-button={theme}>{label}</button>
 
 <style>
   @layer components {
