@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon/components";
+const { cardName = "remeber me?", cardP = "you know me", cardIcon = "creative_ideas" } = Astro.props;
+---
+
+<div class="cardContainerCore">
+  <Icon name={cardIcon} />
+  <h3>{cardName}</h3>
+  <p>{cardP}</p>
+  <a href="#">Read More</a>
+</div>
+
+<style>
+  @layer components {
+    :root {
+      --arrow-icon: url("./src/icons/smallArrow.svg");
+    }
+    .cardContainerCore {
+      background-color: var(--primary_white);
+      padding: 2.25rem 1.44rem;
+      width: 17rem;
+      height: fit-content;
+
+      border-radius: 1.25rem;
+    }
+    [data-icon] {
+      width: 3.29863rem;
+      height: 3.29863rem;
+    }
+    a {
+      text-decoration: none;
+      color: var(--primary_black);
+
+      &:hover {
+        --colorChange: 40% #fff;
+      }
+    }
+    a:after {
+      content: "   ";
+      width: 1.6rem;
+      aspect-ratio: 1;
+      background: var(--arrow-icon) 50% 50% / contain no-repeat;
+    }
+    h3 {
+      font-size: 1.25rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>

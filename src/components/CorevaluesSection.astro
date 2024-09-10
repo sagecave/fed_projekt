@@ -1,0 +1,55 @@
+---
+import Buttons from "./Buttons.astro";
+import SmallBox from "./SmallBox.astro";
+import ValueCards from "./ValueCards.astro";
+---
+
+<section>
+  <div class="coreValues_section">
+    <div class="flexContainer">
+      <div class="flexCore">
+        <SmallBox boxContentP="Growing with our Clients" />
+        <h2>Our core values & principles</h2>
+        <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+      </div>
+      <div><Buttons theme="dark" label="Get in touch" /></div>
+    </div>
+    <div class="valueCardContainer">
+      <ValueCards cardName="Creative Ideas" cardP="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." />
+      <ValueCards cardIcon="best_features" cardName="Best Features" cardP="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+      <ValueCards cardIcon="experience" cardName="Experience" cardP="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." />
+      <ValueCards cardIcon="easy_solutions" cardName="Easy Solutions" cardP="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+    </div>
+  </div>
+</section>
+
+<style>
+  @layer components {
+    section {
+      background-color: var(--primary_black);
+    }
+    .coreValues_section {
+      grid-column: 2/4;
+    }
+    .flexCore {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+    }
+    .flexContainer {
+      display: flex;
+      padding: 6rem 0rem;
+
+      justify-content: space-between;
+    }
+    .valueCardContainer {
+      display: flex;
+      gap: 2.25rem;
+      flex-wrap: wrap;
+    }
+    h2,
+    p {
+      color: var(--primary_white);
+    }
+  }
+</style>
