@@ -1,0 +1,39 @@
+---
+import { Icon } from "astro-icon/components";
+const { contactIcons = "call", contactName = "Call Today", contectP = "+1 800 100 900" } = Astro.props;
+---
+
+<div class="infoBarContainer">
+  <Icon name={contactIcons} />
+  <div class="textContainer">
+    <p>{contectP}</p>
+    <h3>{contactName}</h3>
+  </div>
+</div>
+
+<style>
+  @layer components {
+    .infoBarContainer {
+      display: flex;
+      gap: 1rem;
+
+      [data-icon] {
+        width: 3.27075rem;
+        height: 3.27075rem;
+      }
+
+      .textContainer {
+        display: flex;
+        flex-direction: column-reverse;
+
+        p {
+          font-size: 1rem;
+        }
+        h3 {
+          font-size: 1.25rem;
+          line-height: 1rem;
+        }
+      }
+    }
+  }
+</style>

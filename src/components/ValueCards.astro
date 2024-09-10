@@ -30,14 +30,17 @@ const { cardName = "remeber me?", cardP = "you know me", cardIcon = "creative_id
     a {
       text-decoration: none;
       color: var(--primary_black);
+      display: flex;
+      gap: 0.5rem;
 
       &:hover {
         --colorChange: 40% #fff;
       }
     }
     a:after {
-      content: "   ";
-      width: 1.6rem;
+      display: inline-block;
+      content: "";
+      width: 1rem;
       aspect-ratio: 1;
       background: var(--arrow-icon) 50% 50% / contain no-repeat;
     }

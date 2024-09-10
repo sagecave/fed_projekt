@@ -8,6 +8,7 @@ import ExpectSection from "../components/ExpectSection.astro";
 import SectionFinancial from "../components/SectionFinancial.astro";
 import CircleSection from "../components/CircleSection.astro";
 import CorevaluesSection from "../components/CorevaluesSection.astro";
+import ContactUsSection from "../components/ContactUsSection.astro";
 const data_url = "https://raw.githubusercontent.com/sagecave/frontend-design/main/resources/json/employees.json";
 const employeeData = await fetch(data_url).then((res) => res.json());
 ---
@@ -23,4 +24,5 @@ const employeeData = await fetch(data_url).then((res) => res.json());
   <SectionFinancial />
   <CircleSection />
   <CorevaluesSection />
+  <ContactUsSection />
 </BaseLayout>

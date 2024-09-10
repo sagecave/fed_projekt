@@ -1,0 +1,71 @@
+---
+import InfomationBars from "./InfomationBars.astro";
+import SmallBox from "./SmallBox.astro";
+---
+
+<section>
+  <div class="ContactContainer">
+    <div class="ContactContent">
+      <SmallBox boxContentP="Proccess" />
+      <h2>Contact Us. It’s Easy.</h2>
+      <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.</p>
+      <div class="iconContainer">
+        <InfomationBars />
+        <InfomationBars contactIcons="clock" contectP="Monday To Friday" contactName="9AM - 5PM" />
+        <InfomationBars contactIcons="location" contectP="USA Office" contactName="195 Devonshire St Boston, MA 02110" />
+      </div>
+    </div>
+    <div class="imgGrid">
+      <div class="ContactImgs">
+        <div class="flexImgContainer">
+          <img src="../src/assets/images/its_easyBig.jpg" alt="" />
+          <div class="imgBlock">
+            <img src="../src/assets/images/its_easySmall.jpg" alt="" />
+            <img src="../src/assets/images/its_easySmall1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @layer components {
+    section {
+      padding: 6rem;
+    }
+    .ContactContainer {
+      grid-column: 2/4;
+      grid-template-columns: subgrid;
+      display: grid;
+    }
+    .ContactContent {
+      grid-column: 1;
+      max-width: 70%;
+    }
+    .imgGrid {
+    }
+    .iconContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+    .imgBlock {
+      display: flex;
+      flex-direction: column;
+
+      gap: 1rem;
+    }
+    .ContactImgs {
+      & img {
+        width: 18rem;
+        border-radius: 2rem;
+      }
+    }
+    .flexImgContainer {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+  }
+</style>
