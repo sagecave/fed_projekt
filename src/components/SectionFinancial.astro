@@ -9,7 +9,7 @@ import { Icon } from "astro-icon/components";
       <h2>Financial Projections</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-    <div>
+    <div class="buttonContainer">
       <Icon name="balance_sheet" />
       <Icon name="balance_sheet" />
     </div>
@@ -46,7 +46,22 @@ import { Icon } from "astro-icon/components";
 <style>
   @layer components {
     .financialContainer {
-      grid-column: 2/3;
+      grid-column: 2/4;
+      display: flex;
+
+      p {
+        max-width: 80%;
+      }
+
+      & .buttonContainer {
+        display: flex;
+        gap: 1.62rem;
+        align-items: flex-end;
+        [data-icon] {
+          width: 4.34594rem;
+          height: 4.34594rem;
+        }
+      }
       > ul {
         scroll-snap-type: x mandatory;
         grid-column: full;
