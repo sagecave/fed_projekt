@@ -2,9 +2,21 @@
 import Image from "astro/components/Image.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EmployeeSection from "../components/EmployeeSection.astro";
-
+import FrontpageHero from "../components/FrontpageHero.astro";
+import HeroCard from "../components/HeroCard.astro";
+import ExpectSection from "../components/ExpectSection.astro";
+import SectionFinancial from "../components/SectionFinancial.astro";
 const data_url = "https://raw.githubusercontent.com/sagecave/frontend-design/main/resources/json/employees.json";
 const employeeData = await fetch(data_url).then((res) => res.json());
 ---
 
-<BaseLayout title="Home" />
+<BaseLayout title="Home">
+  <FrontpageHero />
+  <ExpectSection
+    headerContent="What To Expect"
+    pContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    liContentFirst="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day."
+    liContentSecond="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."
+  />
+  <SectionFinancial />
+</BaseLayout>

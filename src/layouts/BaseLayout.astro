@@ -2,9 +2,6 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import FrontpageHero from "../components/FrontpageHero.astro";
-import HeroCard from "../components/HeroCard.astro";
-import ExpectSection from "../components/ExpectSection.astro";
 
 const { title = "" } = Astro.props;
 ---
@@ -22,14 +19,6 @@ const { title = "" } = Astro.props;
       <Header />
     </header>
     <main>
-      <FrontpageHero />
-      <ExpectSection
-        headerContent="What To Expect"
-        pContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        liContentFirst="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day."
-        liContentSecond="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."
-      />
-
       <slot />
     </main>
     <footer>
