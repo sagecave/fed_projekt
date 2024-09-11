@@ -41,11 +41,11 @@
 
     @font-face {
         font-family: "cabin";
-        src: url(../fonts/Cabin/Cabin-Italic-VariableFont_wdth\,wght.ttf);
+        src: url(../fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf);
       }
     @font-face {
         font-family: "lato";
-        src: url(../fonts/Lato/Lato-BlackItalic.ttf);
+        src: url(../fonts/Lato/Lato-Regular.ttf);
       }
 
     .flow > *+* {
@@ -66,6 +66,8 @@
         font-weight: inherit;
         margin: 0;
         font-family: 'cabin';
+        --flow-space:1rem
+      
     }
     h1 {
         font-size: var(--header-1);
@@ -95,6 +97,7 @@
     p{
         line-height: 1.475rem;
         font-family: 'lato';
+        --flow-space: 2rem
        
     }
    
