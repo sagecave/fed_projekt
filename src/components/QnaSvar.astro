@@ -1,0 +1,62 @@
+---
+
+---
+
+<div class="questionConatainer">
+  <details name="a">
+    <summary>What will happen when I’ve sent my application?</summary>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</div>
+  </details>
+  <hr />
+  <details name="a">
+    <summary>Can I get a free trial before I purchase?</summary>
+    <div>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</div>
+  </details>
+  <hr />
+  <details name="a">
+    <summary>What should I include in my personal statement?</summary>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</div>
+  </details>
+  <hr />
+  <details name="a">
+    <summary>Will membership plans be charged automatically?</summary>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</div>
+  </details>
+  <hr />
+  <details name="a">
+    <summary>What will happen when I’ve sent my application?</summary>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</div>
+  </details>
+  <hr />
+  <details name="a">
+    <summary>Can I get a free trial before I purchase?</summary>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</div>
+  </details>
+</div>
+
+<style>
+  @layer components {
+    .questionConatainer {
+      display: flex;
+      gap: 1rem;
+      details {
+        width: 100%;
+        div {
+          padding: 1rem 0rem 0rem 0rem;
+        }
+      }
+    }
+
+    hr {
+      border-color: #dadada;
+      width: 100%;
+    }
+    details > summary {
+      list-style-type: "+ ";
+    }
+
+    details[open] > summary {
+      list-style-type: "- ";
+    }
+  }
+</style>
