@@ -4,10 +4,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import RealitySection from "../components/RealitySection.astro";
 import CorevaluesSection from "../components/CorevaluesSection.astro";
 import Newsletter from "../components/Newsletter.astro";
+import ChampionSection from "../components/ChampionSection.astro";
 ---
 
 <BaseLayout title="About">
   <HeroSection />
+
   <RealitySection
     class="flow"
     headerContent="Turn your ideas into reality."
@@ -16,5 +18,6 @@ import Newsletter from "../components/Newsletter.astro";
     liContentSecond="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."
   />
   <CorevaluesSection themeSec="lightMode" colorBut="black" />
+  <ChampionSection />
   <Newsletter />
 </BaseLayout>
