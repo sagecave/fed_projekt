@@ -11,6 +11,10 @@ const { cardName = "remeber me?", cardP = "you know me", cardIcon = "creative_id
 </div>
 
 <style>
+  [data-icon] {
+    width: 3.29863rem;
+    height: 3.29863rem;
+  }
   @layer components {
     :root {
       --arrow-icon: url("./src/icons/smallArrow.svg");
@@ -23,10 +27,7 @@ const { cardName = "remeber me?", cardP = "you know me", cardIcon = "creative_id
 
       border-radius: 1.25rem;
     }
-    [data-icon] {
-      width: 3.29863rem;
-      height: 3.29863rem;
-    }
+
     a {
       text-decoration: none;
       color: var(--primary_black);

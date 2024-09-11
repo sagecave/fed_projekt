@@ -6,10 +6,10 @@ import InputKnap from "./InputKnap.astro";
 <div class="navbar">
   <h1>AskExperts</h1>
   <ul>
-    <li><a href="#">Home</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="#">Case Study</a></li>
     <li><a href="#">Team</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="/about">About</a></li>
   </ul>
   <Buttons theme="yellow" label="login" popuoKnap="popup" />
 
@@ -28,11 +28,12 @@ import InputKnap from "./InputKnap.astro";
     #popup {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 2.88rem;
       background-color: var(--primary_black);
       padding: 2.5rem 3.75rem 3.75rem 3.75rem;
       border-radius: 1.875rem;
-      width: 40rem;
+      width: 35%;
       z-index: -3;
 
       h2 {

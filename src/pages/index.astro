@@ -15,16 +15,17 @@ const employeeData = await fetch(data_url).then((res) => res.json());
 ---
 
 <BaseLayout title="Home">
-  <FrontpageHero />
+  <FrontpageHero class="flow" />
   <ExpectSection
+    class="flow"
     headerContent="What To Expect"
     pContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     liContentFirst="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day."
     liContentSecond="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."
   />
-  <SectionFinancial />
-  <CircleSection />
-  <CorevaluesSection />
-  <ContactUsSection />
-  <Newsletter />
+  <SectionFinancial class="flow" />
+  <CircleSection class="flow" />
+  <CorevaluesSection class="flow" />
+  <ContactUsSection class="flow" />
+  <Newsletter class="flow" />
 </BaseLayout>

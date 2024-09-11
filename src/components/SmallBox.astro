@@ -15,6 +15,8 @@ const { boxContentP = "lol", colorOfBox = "yellow" } = Astro.props;
       width: fit-content;
       border-radius: 1.25rem;
       padding: 0rem 0.75rem;
+      letter-spacing: 0.245rem;
+      text-transform: uppercase;
       p {
         text-wrap: nowrap;
       }
@@ -22,6 +24,10 @@ const { boxContentP = "lol", colorOfBox = "yellow" } = Astro.props;
 
     [data-smallBox="white"] {
       background-color: var(--primary_white);
+    }
+    [data-smallBox="green"] {
+      background-color: #4eaf4e;
+      color: var(--primary_white);
     }
   }
 </style>

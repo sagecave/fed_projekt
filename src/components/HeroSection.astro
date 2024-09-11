@@ -1,0 +1,36 @@
+---
+import SmallBox from "./SmallBox.astro";
+---
+
+<section>
+  <div class="heroContainer">
+    <div class="heroContent">
+      <SmallBox boxContentP="Services" />
+      <h1>Creative Services For Boost Your Business Growth</h1>
+    </div>
+  </div>
+</section>
+
+<style>
+  @layer components {
+    section {
+      background-image: url(../assets/images/hero_img.png);
+      height: 37.875rem;
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .heroContainer {
+      background-color: var(--secondary_white);
+      grid-column: 2;
+      grid-row: 2;
+      border-radius: 1.8125rem;
+      width: 130%;
+      .heroContent {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 3.75rem 3.625rem 3.75rem;
+        gap: 0.625rem;
+      }
+    }
+  }
+</style>

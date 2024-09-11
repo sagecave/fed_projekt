@@ -2,17 +2,18 @@
 import Buttons from "./Buttons.astro";
 import SmallBox from "./SmallBox.astro";
 import ValueCards from "./ValueCards.astro";
+const { themeSec = "none", boxContent = "Growing with our Clients", boxColor = "none", colorBut = "dark" } = Astro.props;
 ---
 
-<section>
+<section data-coreSec={themeSec}>
   <div class="coreValues_section">
     <div class="flexContainer">
       <div class="flexCore">
-        <SmallBox boxContentP="Growing with our Clients" />
+        <SmallBox colorOfBox={boxColor} boxContentP={boxContent} />
         <h2>Our core values & principles</h2>
         <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
       </div>
-      <div><Buttons theme="dark" label="Get in touch" /></div>
+      <div><Buttons theme={colorBut} label="Get in touch" /></div>
     </div>
     <div class="valueCardContainer">
       <ValueCards cardName="Creative Ideas" cardP="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." />
@@ -25,6 +26,15 @@ import ValueCards from "./ValueCards.astro";
 
 <style>
   @layer components {
+    [data-coreSec="lightMode"] {
+      background-color: var(--secondary_white);
+      .flexCore {
+        h2,
+        p {
+          color: var(--primary_black);
+        }
+      }
+    }
     section {
       background-color: var(--primary_black);
     }

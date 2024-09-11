@@ -1,0 +1,20 @@
+---
+import HeroSection from "../components/HeroSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RealitySection from "../components/RealitySection.astro";
+import CorevaluesSection from "../components/CorevaluesSection.astro";
+import Newsletter from "../components/Newsletter.astro";
+---
+
+<BaseLayout title="About">
+  <HeroSection />
+  <RealitySection
+    class="flow"
+    headerContent="Turn your ideas into reality."
+    pContent="Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps."
+    liContentFirst="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day."
+    liContentSecond="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."
+  />
+  <CorevaluesSection themeSec="lightMode" colorBut="black" />
+  <Newsletter />
+</BaseLayout>
