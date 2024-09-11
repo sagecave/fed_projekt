@@ -21,6 +21,17 @@ import Buttons from "./Buttons.astro";
 </div>
 
 <style>
+  @container (width > 200px) {
+    div {
+      height: 19rem;
+    }
+  }
+  @container (width < 300px) {
+    div {
+      height: 21rem;
+    }
+  }
+
   .heroCard_container {
     display: flex;
     flex-direction: row;
@@ -28,6 +39,8 @@ import Buttons from "./Buttons.astro";
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    container-type: inline-size;
+    margin-top: 1rem;
 
     div {
       padding: 2.875rem;
@@ -36,7 +49,6 @@ import Buttons from "./Buttons.astro";
       border-radius: 1.25rem;
       backdrop-filter: blur(16px);
       width: 24rem;
-      height: 19rem;
     }
   }
 

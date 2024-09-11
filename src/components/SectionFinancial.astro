@@ -4,7 +4,7 @@ import { Icon } from "astro-icon/components";
 
 <section>
   <div class="financialContainer">
-    <div class="">
+    <div class="financialContent">
       <Icon name="grafic_color" />
       <h2>Financial Projections</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -45,6 +45,19 @@ import { Icon } from "astro-icon/components";
 
 <style>
   @layer components {
+    @container (width < 400px) {
+      .buttonContainer {
+        display: none;
+      }
+      .financialContent {
+        grid-column: 2/4;
+      }
+    }
+    @container (width > 400px) {
+      .buttonContainer {
+        display: flex;
+      }
+    }
     section {
       padding: 2rem 0rem 6rem;
     }
@@ -52,13 +65,13 @@ import { Icon } from "astro-icon/components";
       grid-column: 2/4;
       display: flex;
       padding: 4rem 0rem;
+      container-type: inline-size;
 
       p {
         max-width: 80%;
       }
 
       & .buttonContainer {
-        display: flex;
         gap: 1.62rem;
         align-items: flex-end;
         [data-icon] {

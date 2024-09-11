@@ -27,9 +27,9 @@ import SmallBox from "./SmallBox.astro";
     }
     .sectionContainer {
       grid-column: 2/4;
+      container-type: inline-size;
     }
     .flex {
-      display: flex;
       padding: 6rem 0rem;
     }
 
@@ -39,6 +39,19 @@ import SmallBox from "./SmallBox.astro";
       min-width: 50%;
       flex-wrap: wrap;
       justify-content: space-evenly;
+    }
+    @container (width > 401px) {
+      .flex {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    @container (width < 400px) {
+      .flex {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   }
 </style>
