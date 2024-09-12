@@ -1,6 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import InfomationBars from "./InfomationBars.astro";
 import SmallBox from "./SmallBox.astro";
+import easyBig from "../assets/images/its_easyBig.jpg";
+import easySmallOne from "../assets/images/its_easySmall.jpg";
+import easySmallTwo from "../assets/images/its_easySmall1.jpg";
 ---
 
 <section>
@@ -18,10 +22,11 @@ import SmallBox from "./SmallBox.astro";
     <div class="imgGrid">
       <div class="ContactImgs">
         <div class="flexImgContainer">
-          <img src="../src/assets/images/its_easyBig.jpg" alt="" />
+          <Image src={easyBig} alt="/" />
+
           <div class="imgBlock">
-            <img src="../src/assets/images/its_easySmall.jpg" alt="" />
-            <img src="../src/assets/images/its_easySmall1.jpg" alt="" />
+            <Image src={easySmallOne} alt="/" />
+            <Image src={easySmallTwo} alt="/" />
           </div>
         </div>
       </div>

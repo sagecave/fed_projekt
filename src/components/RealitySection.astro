@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import SmallBox from "./SmallBox.astro";
+import into from "../assets/images/into_reality.jpg";
 
 const { liContentFirst = "liContentFirst", liContentSecond = "liContentSecond", headerContent = "headerContent", pContent = "pContent" } = Astro.props;
 ---
@@ -15,7 +17,7 @@ const { liContentFirst = "liContentFirst", liContentSecond = "liContentSecond", 
     </ul>
   </div>
   <div>
-    <img src="../src/assets/images/into_reality.jpg" alt="Gruppe image" />
+    <Image src={into} alt="/" />
   </div>
 </section>
 
