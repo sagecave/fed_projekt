@@ -1,0 +1,15 @@
+---
+import EmployeeSection from "../components/EmployeeSection.astro";
+import HeroSection from "../components/HeroSection.astro";
+import HeroSectionTwo from "../components/HeroSectionTwo.astro";
+import Newsletter from "../components/Newsletter.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const data_url = "https://raw.githubusercontent.com/sagecave/frontend-design/main/resources/json/employees.json";
+const employeeData = await fetch(data_url).then((res) => res.json());
+---
+
+<BaseLayout>
+  <HeroSectionTwo />
+  <EmployeeSection data={employeeData} />
+  <Newsletter />
+</BaseLayout>

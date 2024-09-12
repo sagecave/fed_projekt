@@ -1,22 +1,66 @@
 ---
 import type { ImageMetadata } from "astro";
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
 const { employee } = Astro.props;
-const { img, name } = employee;
+const { img, name, description } = employee;
+// const { img, name } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*.{jpeg,jpg,png,gif}");
 if (!images[img]) throw new Error(`"${img}" does not exist in glob: "src/assets/images/*.{jpeg,jpg,png,gif}"`);
-
-const data_url = "https://raw.githubusercontent.com/sagecave/frontend-design/main/resources/json/employees.json";
-const employeeData = await fetch(data_url).then((res) => res.json());
 ---
 
 <article>
-  <Image src={images[img]()} alt={name} width={100} />
+  <div class="personContainer">
+    <Image src={images[img]()} alt={name} width={100} />
+  </div>
+  <div class="content">
+    <div class="personContent">
+      <h3>{name}</h3>
+      <p>{description}</p>
+    </div>
+    <div class="socialLinks">
+      <a href="#">
+        <Icon name="facebook" />
+      </a>
+      <a href="#">
+        <Icon name="instagram" />
+      </a>
+      <a href="#">
+        <Icon name="twitter" />
+      </a>
+    </div>
+  </div>
 </article>
 
 <style>
   @layer components {
+    section {
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+    article {
+      width: 20rem;
+    }
+    .personContainer {
+      display: grid;
+
+      img {
+        border-radius: 2rem;
+        object-fit: cover;
+      }
+    }
+    .socialLinks {
+      width: fit-content;
+      display: flex;
+      gap: 1.81rem;
+    }
   }
 </style>

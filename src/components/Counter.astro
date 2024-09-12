@@ -1,0 +1,57 @@
+---
+
+---
+
+<section>
+  <div class="counterContianer">
+    <dl>
+      <div>
+        <dt>Successful Work</dt>
+        <dd>1128+</dd>
+      </div>
+      <div>
+        <dt>Team member</dt>
+        <dd>908+</dd>
+      </div>
+      <div>
+        <dt>Happy customers</dt>
+        <dd>258+</dd>
+      </div>
+      <div>
+        <dt>Creative Idea</dt>
+        <dd>564+</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<style>
+  @layer components {
+    section {
+      background-color: var(--primary_white);
+    }
+    .counterContianer {
+      grid-column: 2/4;
+      padding: 3rem 0rem;
+    }
+    dl {
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+
+      > * {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 1.125rem;
+        color: #181818;
+
+        :last-child {
+          font-size: 3.125rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+</style>
