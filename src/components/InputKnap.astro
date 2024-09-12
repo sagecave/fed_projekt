@@ -5,9 +5,18 @@ const { inputText = "your mail address" } = Astro.props;
 <input type="text" placeholder={inputText} />
 
 <style>
+  @media only screen and (max-width: 555px) {
+    input {
+      padding: 1rem;
+    }
+  }
+  @media only screen and (min-width: 556px) {
+    input {
+      padding: 1.375rem 9.6875rem 1.375rem 2.0625rem;
+    }
+  }
   input {
     background-color: var(--primary_white);
     border-radius: 3rem;
-    padding: 1.375rem 9.6875rem 1.375rem 2.0625rem;
   }
 </style>

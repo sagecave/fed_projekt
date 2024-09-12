@@ -4,7 +4,9 @@ import InputKnap from "./InputKnap.astro";
 ---
 
 <div class="navbar">
-  <h1>AskExperts</h1>
+  <a href="/">
+    <h1>AskExperts</h1>
+  </a>
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="#">Case Study</a></li>
@@ -12,29 +14,44 @@ import InputKnap from "./InputKnap.astro";
     <li><a href="/about">About</a></li>
   </ul>
   <Buttons theme="yellow" label="login" popuoKnap="popup" />
-
-  <div popover id="popup">
-    <h2>Dashboard Login</h2>
-    <div class="popupContent">
-      <InputKnap inputText="Enter Email" />
-      <InputKnap inputText="Enter Password" />
-      <Buttons theme="yellow" label="Go to dashboard" />
+  <div class="popupContainer">
+    <div popover id="popup">
+      <h2>Dashboard Login</h2>
+      <div class="popupContent">
+        <InputKnap inputText="Enter Email" />
+        <InputKnap inputText="Enter Password" />
+        <Buttons theme="yellow" label="Go to dashboard" />
+      </div>
     </div>
   </div>
 </div>
 
 <style>
   @layer components {
+    @media only screen and (width < 550px) {
+      #popup {
+        padding: 1rem;
+        width: 66%;
+      }
+    }
+    @media only screen and (width > 551px) {
+      #popup {
+        padding: 2.5rem 3.75rem 3.75rem 3.75rem;
+      }
+    }
+
+    .popupContainer {
+      z-index: -3;
+      overflow: hidden;
+    }
     #popup {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 2.88rem;
       background-color: var(--primary_black);
-      padding: 2.5rem 3.75rem 3.75rem 3.75rem;
+
       border-radius: 1.875rem;
-      width: 35%;
-      z-index: -3;
 
       h2 {
         color: var(--primary_white);
@@ -57,6 +74,7 @@ import InputKnap from "./InputKnap.astro";
 
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       h1 {
         color: var(--primary_white);
@@ -64,7 +82,7 @@ import InputKnap from "./InputKnap.astro";
 
       ul {
         display: flex;
-
+        flex-wrap: wrap;
         list-style-type: none;
         gap: 1.875rem;
         padding-right: 15%;
@@ -73,11 +91,13 @@ import InputKnap from "./InputKnap.astro";
           list-style-type: none;
 
           & a {
-            text-decoration: none;
             color: var(--primary_white);
           }
         }
       }
+    }
+    a {
+      text-decoration: none;
     }
   }
 </style>

@@ -26,6 +26,21 @@ const { themeSec = "none", boxContent = "Growing with our Clients", boxColor = "
 
 <style>
   @layer components {
+    @container (width < 650px) {
+      .flexContainer {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    @container (width > 651px) {
+      .flexContainer {
+        display: flex;
+        flex-direction: row;
+      }
+      .flexCore {
+        max-width: 50%;
+      }
+    }
     [data-coreSec="lightMode"] {
       background-color: var(--secondary_white);
       .flexCore {
@@ -40,12 +55,13 @@ const { themeSec = "none", boxContent = "Growing with our Clients", boxColor = "
     }
     .coreValues_section {
       grid-column: 2/4;
+      container-type: inline-size;
     }
     .flexCore {
       display: flex;
       flex-direction: column;
-      max-width: 50%;
     }
+
     .flexContainer {
       display: flex;
       padding: 5rem 0rem 2rem;
@@ -57,6 +73,7 @@ const { themeSec = "none", boxContent = "Growing with our Clients", boxColor = "
       gap: 2.25rem;
       flex-wrap: wrap;
       padding: 0rem 0rem 3rem;
+      justify-content: space-evenly;
     }
     h2,
     p {
