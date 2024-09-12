@@ -44,6 +44,10 @@ import { Icon } from "astro-icon/components";
 </section>
 
 <style>
+  [data-icon] {
+    width: 4.34594rem;
+    height: 4.34594rem;
+  }
   @layer components {
     @container (width < 400px) {
       .buttonContainer {
@@ -74,10 +78,6 @@ import { Icon } from "astro-icon/components";
       & .buttonContainer {
         gap: 1.62rem;
         align-items: flex-end;
-        [data-icon] {
-          width: 4.34594rem;
-          height: 4.34594rem;
-        }
       }
       > ul {
         scroll-snap-type: x mandatory;
