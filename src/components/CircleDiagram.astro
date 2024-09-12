@@ -12,62 +12,60 @@ const { circleName = "?", procent = "--percent: 50%", circleP = "?" } = Astro.pr
   </div>
 </div>
 <style>
-  @layer components {
-    /* @property --percent {
+  /* @property --percent {
       syntax: "<percentage>";
       inherits: true;
       initial-value: 0%;
     } */
 
-    .circleContainer {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      gap: 1rem;
+  .circleContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .parent {
+    text-align: center;
+    align-content: center;
+
+    --offset-pos: 0.313rem;
+    /* animation: --pie 3s linear infinite; */
+    border: var(--offset-pos) solid transparent;
+    background:
+      linear-gradient(var(--primary_yellow), var(--primary_yellow)) padding-box,
+      conic-gradient(var(--primary_white) var(--percent), #daae3c 0) border-box;
+    position: relative;
+
+    .child {
+      aspect-ratio: 1;
+      border-radius: 50rem;
+      width: 1.25rem;
+      background: black;
+      border: solid 0.25rem white;
+      position: absolute;
+      offset-path: border-box;
+      offset-distance: var(--percent);
+      offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
     }
+  }
 
-    .parent {
-      text-align: center;
-      align-content: center;
-
-      --offset-pos: 0.313rem;
-      /* animation: --pie 3s linear infinite; */
-      border: var(--offset-pos) solid transparent;
-      background:
-        linear-gradient(var(--primary_yellow), var(--primary_yellow)) padding-box,
-        conic-gradient(var(--primary_white) var(--percent), #daae3c 0) border-box;
-      position: relative;
-
-      .child {
-        aspect-ratio: 1;
-        border-radius: 50rem;
-        width: 1.25rem;
-        background: black;
-        border: solid 0.25rem white;
-        position: absolute;
-        offset-path: border-box;
-        offset-distance: var(--percent);
-        offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
-      }
-    }
-
-    /* @keyframes --pie {
+  /* @keyframes --pie {
       to {
         --percent: 86%;
       }
     } */
 
-    .parent {
-      aspect-ratio: 1;
-      width: 7.61675rem;
-      border-radius: 50rem;
-      margin-inline: auto;
-    }
-    p {
-      font-size: 1rem;
-    }
-    h3 {
-      font-size: 2.125rem;
-    }
+  .parent {
+    aspect-ratio: 1;
+    width: 7.61675rem;
+    border-radius: 50rem;
+    margin-inline: auto;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 2.125rem;
   }
 </style>
