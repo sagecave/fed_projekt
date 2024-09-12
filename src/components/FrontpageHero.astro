@@ -1,6 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import Buttons from "./Buttons.astro";
 import HeroCard from "./HeroCard.astro";
+import Sarah from "../assets/images/sarah.jpg";
 ---
 
 <section>
@@ -11,7 +13,7 @@ import HeroCard from "./HeroCard.astro";
       <Buttons theme="white" label="Book a Meeting" />
     </div>
     <div class="heroimg">
-      <img src="../src/assets/images/sarah.jpg" alt="Sarah" />
+      <Image src={Sarah} />
     </div>
     <div class="heroCards">
       <HeroCard />
